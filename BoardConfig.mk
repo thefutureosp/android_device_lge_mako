@@ -16,7 +16,7 @@
 
 #TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 #TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_EXTRA_CFLAGS := -mtune=cortex-a9 -mcpu=cortex-a9
+TARGET_EXTRA_CFLAGS := -mtune=cortex-a9 -mcpu=cortex-a9 -fno-inline-functions -fno-ipa-cp-clone -fno-unswitch-loops -fno-tree-vectorize
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -26,7 +26,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_GCC_VERSION := 4.7
 TARGET_USE_O3 := true
 #TARGET_USE_GRAPHITE := true
-#TARGET_USE_LINARO_STRING_ROUTINES := true
+TARGET_USE_LINARO_STRING_ROUTINES := true
 
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true
